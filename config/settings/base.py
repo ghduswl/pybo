@@ -141,7 +141,7 @@ LOGGING = {
     'formatters': {
         'django.server': {
             '()': 'django.utils.log.ServerFormatter',
-            'format': '{server_time}] {message}',
+            'format': '[{server_time}] {message}',
             'style': '{',
         },
         'standard': {
@@ -166,10 +166,10 @@ LOGGING = {
         },
         'file': {
             'level': 'INFO',
-            'filters': ['requird_debug_false'],
+            'filters': ['require_debug_false'],
             'class': 'logging.handlers.RotatingFileHandler',
             'filename': BASE_DIR / 'logs/mysite.log',
-            'maxBytes': 1024*1024*5, # 5 MB
+            'maxBytes': 1024*1024*5,  # 5 MB
             'backupCount': 5,
             'formatter': 'standard',
         },
@@ -183,6 +183,6 @@ LOGGING = {
             'handlers': ['django.server'],
             'level': 'INFO',
             'propagate': False,
-        }
+        },
     }
 }
