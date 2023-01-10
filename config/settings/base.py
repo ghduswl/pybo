@@ -135,7 +135,7 @@ LOGGING = {
              '()': 'django.utils.log.RequireDebugFalse',
         },
         'require_debug_true': {
-            '()': 'django.utils.log.RequireDebugTrue',
+             '()': 'django.utils.log.RequireDebugTrue',
         },
     },
     'formatters': {
