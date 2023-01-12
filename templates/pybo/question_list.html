@@ -27,7 +27,7 @@
     </div>
     <table class="table">
         <thead>
-        <tr class="text center pink">
+        <tr class="text center">
             <th>번호</th>
             <th>추천</th>
             <th style="width:50%">제목</th>
@@ -74,12 +74,12 @@
         {% if question_list.has_previous %}
         <li class="page-item">
             <a class="page-link"
-               data-page="{{ question_list.previous_page_number }}" href="#"><</a>
+               data-page="{{ question_list.previous_page_number }}" href="#"><<</a>
         </li>
         {% else %}
         <li class="page-item disabled">
             <a class="page-link" tabindex="-1" aria-disabled="true" href="#">
-                <
+                <<
             </a>
         </li>
         {% endif %}
@@ -106,19 +106,19 @@
         <li class="page-item">
             <a class="page-link"
                data-page="{{ question_list.next_page_number }}" href="#">
-                >
+                >>
             </a>
         </li>
         {% else %}
         <li class="page-item disabled">
             <a class="page-link" tabindex="-1" aria-disabled="true" href="#">
-                >
+                >>
             </a>
         </li>
         {% endif %}
     </ul>
-    <a href="{% url 'pybo:question_create' %}" class="btn btn-primary">
-        질문 등록하기
+    <a href="{% url 'pybo:question_create' %}" class="btn btn-dark">
+        질문 등록
     </a>
 </div>
 <form id="searchForm" method="get" action="{% url 'index' %}">

@@ -1,6 +1,6 @@
 <!-- 내비게이션바 -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-    <a class="navbar-brand" href="{% url 'pybo:index' %}">Pybo</a>
+    <a class="navbar-brand" href="{% url 'pybo:index' %}">사은품 재고 관리 시스템</a>
     <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
             data-target="#navbarNav" aria-contrals="navbarNav"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -11,7 +11,7 @@
             <li class="nav-item">
                 {% if user.is_authenticated %}
                 <a class="nav-link" href="{% url 'common:logout' %}">
-                    {{ user.username }} (로그아웃)
+                    {{ user.username }} | 로그아웃
                 </a>
                 {% else %}
                 <a class="nav-link" href="{% url 'common:login' %}">로그인</a>
