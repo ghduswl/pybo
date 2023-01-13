@@ -48,7 +48,7 @@
                 {% endif %}
             </td>
             <td class="text-left" >
-                <a href="{% url 'pybo:detail' question.id %}" class="dark">
+                <a href="{% url 'pybo:detail' question.id %}" class="btn btn-dark">
                     {{ question.subject }}
                 </a>
                 {% if question.answer_set.count > 0 %}
